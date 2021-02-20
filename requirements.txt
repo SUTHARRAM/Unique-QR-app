@@ -1,1 +1,5 @@
 Django>=2.2<3.0.12
+django-qr-code
+Pillow==4.0
+qrcode
+xhtml2pdf
