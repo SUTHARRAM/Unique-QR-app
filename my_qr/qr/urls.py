@@ -3,5 +3,6 @@ from .views import *
 
 urlpatterns = [
     path('', home),
-    path('s/', display)
+    path('display/', display),
+    path('pdf/<int:pk>/', Pdf.as_view(), name = 'qrgen'),
 ]

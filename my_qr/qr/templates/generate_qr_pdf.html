@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Qr-Pdf</title>
+    <style type="text/css">
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        .position {
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+
+<div class="container">
+    <div class="position">
+        <div>
+            <h3>Qr Code - {{ today | date:"d/m/Y" }}</h3>
+            
+            <img width="200" height="200" src="/media/qrcode/qr_code-{{item.id}}.png"  alt="">
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

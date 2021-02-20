@@ -7,19 +7,15 @@
     <title>forms</title>
 </head>
 <body>
-    <form action="" method="post">
-        {% csrf_token %}
-        <table>
-            {{form.as_table}}
-        </table>
-        <input  type="submit" value="Submit" />
-    </form>
-    <div>
-        <div>
-            {%for item in items %}
-            <h1>{{item.name}} {{item.price}}</h1>
-            {% endfor %}
-        </div>
+    <div class=f"{}">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input  type="submit" value="Submit" />
+        </form>
     </div>
+
 </body>
 </html>

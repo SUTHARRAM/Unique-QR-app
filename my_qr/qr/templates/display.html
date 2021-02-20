@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Displays</title>
+    <style type="text/css">
+        .position {
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="position">
+            {%for item in items %}
+            <h1>{{item.name}} {{item.price}}</h1>
+            <a href="{% url 'qrgen' pk=item.id %}"> <button type="button">GeneratePDF</button></a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+
+
